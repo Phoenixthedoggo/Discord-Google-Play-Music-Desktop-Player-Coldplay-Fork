@@ -1,14 +1,14 @@
 {
   "name": "discord-gpm",
   "version": "1.0.0",
-  "description": "Adds GPM Rich Presence to Discord",
+  "description": "Adds GPM Rich Presence to Discord Specifically for Coldplay Music",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WalshyDev/Discord-Spotify-RPC.git"
+    "url": "git+https://github.com/Phoenixthedoggo/Discord-Google-Play-Music-Desktop-Player-Coldplay-Fork/tree/Coldplay.git"
   },
   "dependencies": {
     "discord-rpc": "^3.0.0-beta.3"
@@ -17,11 +17,12 @@
     "discord",
     "gpm",
     "rpc"
+    "coldplay"
   ],
-  "author": "Dynista",
+  "author": "Phoenixthedoggo",
   "license": "GPL-3.0+",
   "bugs": {
-    "url": "https://github.com/Dynista/Discord-Google-Play-Music-Desktop-Player/issues"
+    "url": "https://github.com/Phoenixthedoggo/Discord-Google-Play-Music-Desktop-Player-Coldplay-Fork/tree/Coldplay/issues"
   },
-  "homepage": "https://github.com/Dynista/Discord-Google-Play-Music-Desktop-Player"
+  "homepage": "https://github.com/Phoenixthedoggo/Discord-Google-Play-Music-Desktop-Player-Coldplay-Fork/tree/Coldplay"
 }
