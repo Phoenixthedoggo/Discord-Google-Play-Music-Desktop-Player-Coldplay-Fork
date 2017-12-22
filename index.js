@@ -1,7 +1,18 @@
 const DiscordRPC = require('discord-rpc');
-const ClientId = "384795814859636736";
+const ClientId = "393636216391860224";
 const rpc = new DiscordRPC.Client({ transport: 'ipc' });
 var currentSong = "";
+
+var albumArt = {
+    		"Parachutes": "parachutes",
+    		"X&Y": "xy",
+		"Ghost Stories": "ghoststories",
+    		"Viva La Vida Or Death And All His Friends": "viva",
+		"Kaleidoscope EP": "kale",
+		"A Head Full Of Dreams": "head",
+		"Mylo Xyloto": "mylo",
+		"A Rush Of Blood To The Head": "rush",
+};
 
 async function updateActivity() {
 	if (!rpc)
@@ -16,18 +27,18 @@ async function updateActivity() {
 	}
     var obj = JSON.parse(fs.readFileSync(filepath, 'utf8'));
     console.log(obj["song"]["title"]);
-	
+
 	if(obj["playing"] == true) {
 		rpc.setActivity({
 			details: `Playing ${obj["song"]["title"]}`,
-			state: `By ${obj["song"]["artist"]}`,
-			largeImageKey: 'gpm',
+			state: `In ${obj["song"]["album"]}`,
+			largeImageKey: albumArt[obj["song"]["album"]],
 			instance: false,
 		});
 	} else {
 		rpc.setActivity({
 			details: `Nothing`,
-			largeImageKey: 'gpm',
+			largeImageKey: 'coldplay',
 			instance: false,
 		});
 	}
