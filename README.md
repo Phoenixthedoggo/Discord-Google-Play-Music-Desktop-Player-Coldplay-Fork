@@ -8,4 +8,5 @@ Run `npm start` in console after the setup steps and boom! Rich Presence with yo
 # What is this?
 This is a fork of Dynista's Discord Google Play Music Desktop Player that has dedicated album art for every coldplay album EVER. 
 This project took 2 hours of my time and I say it was well worth the effort :D
-![work1](https://raw.githubusercontent.com/Discord-Google-Play-Music-Desktop-Player-Coldplay-Fork//coldplay/pictures/dis1.png)
+
+#![work1](https://raw.githubusercontent.com/Discord-Google-Play-Music-Desktop-Player-Coldplay-Fork//coldplay/pictures/dis1.png)
