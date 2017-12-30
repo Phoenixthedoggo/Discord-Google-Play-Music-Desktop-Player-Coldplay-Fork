@@ -53,6 +53,7 @@ var albumArt = {
     "Monstercat Uncaged Vol. 2": "mcatbv2",
     "Monstercat Uncaged Vol. 3": "mcatbv3",
     "Monstercat: Best of 2017": "mcat2017",
+    "Monstercat: Best of 2016": "mcat2016",
 
 
 
