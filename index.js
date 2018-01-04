@@ -53,7 +53,6 @@ var albumArt = {
     "Monstercat Uncaged Vol. 2": "mcatbv2",
     "Monstercat Uncaged Vol. 3": "mcatbv3",
     "Monstercat: Best of 2017": "mcat2017",
-    "Monstercat: Best of 2016": "mcat2016",
 
 
 
@@ -82,6 +81,9 @@ async function updateActivity() {
 			details: `Howling to: ${obj["song"]["title"]}`,
 			state: `By ${obj["song"]["artist"]}`,
 			largeImageKey: albumArt[obj["song"]["album"]],
+      largeImageText: 'Awoooooooo',
+      smallImageKey: 'sheppie',
+      smallImageText: 'Woof! ^w^',
 			instance: false,
 		});
 	} else {
