@@ -53,7 +53,7 @@ var albumArt = {
     "Monstercat Uncaged Vol. 2": "mcatbv2",
     "Monstercat Uncaged Vol. 3": "mcatbv3",
     "Monstercat: Best of 2017": "mcat2017",
-
+    "Ready to Fly (feat. Adam Young)": "rtf",
 
 
 
@@ -89,7 +89,7 @@ async function updateActivity() {
 	} else {
 		rpc.setActivity({
 			details: `Nothing`,
-			largeImageKey: 'coldplay',
+			largeImageKey: 'headlarge',
 			instance: false,
 		});
 	}
