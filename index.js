@@ -3,6 +3,11 @@ const ClientId = "393636216391860224";
 const rpc = new DiscordRPC.Client({ transport: 'ipc' });
 var currentSong = "";
 
+function round(value, precision) {
+    var multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+}
+
 var albumArt = {
     "Parachutes": "parachutes",
     "X&Y": "xy",
@@ -60,6 +65,7 @@ var albumArt = {
 
 
 
+
 };
 
 async function updateActivity() {
@@ -76,19 +82,42 @@ async function updateActivity() {
     var obj = JSON.parse(fs.readFileSync(filepath, 'utf8'));
     console.log(obj["song"]["title"]);
 
+
+
+    var timein = (obj["time"]["current"])/1000;
+    var timeinrounded = Math.round(timein)
+    console.log(timeinrounded);
+
+    var timetotal = (obj["time"]["total"])/1000;
+    var timetotalrounded = Math.round(timetotal)
+    console.log(timetotalrounded);
+
+    var epochthing = Math.round((new Date()).getTime() / 1000);
+    var epochendtime = timetotalrounded - timeinrounded;
+    var timeendepoch = epochthing + epochendtime;
+
+    console.log(timeendepoch);
+
+
+
+
+
 	if(obj["playing"] == true) {
 		rpc.setActivity({
-			details: `Howling to: ${obj["song"]["title"]}`,
-			state: `By ${obj["song"]["artist"]}`,
-			largeImageKey: albumArt[obj["song"]["album"]],
-      largeImageText: 'Awoooooooo',
-      smallImageKey: 'sheppie',
-      smallImageText: 'Woof! ^w^',
-			instance: false,
+      			details: `Howling to: ${obj["song"]["title"]}`,
+      			state: `By ${obj["song"]["artist"]}`,
+     			largeImageKey: albumArt[obj["song"]["album"]],
+      			largeImageText: 'Awoooooooo',
+      			smallImageKey: 'sheppie',
+      			smallImageText: 'Woof! ^w^',
+      			endTimestamp: timeendepoch,
+      			startTimestamp: epochthing,
+      			instance: false,
 		});
 	} else {
 		rpc.setActivity({
 			details: `Nothing`,
+      			largeImageText:'UwU',
 			largeImageKey: 'headlarge',
 			instance: false,
 		});
