@@ -9,7 +9,7 @@ Run `npm start` in console after the setup steps and boom! Rich Presence with yo
 This is a fork of Dynista's Discord Google Play Music Desktop Player that has dedicated album art for every coldplay album EVER. 
 This project took 2 hours of my time and I say it was well worth the effort :D
 
-# ![work1](https://github.com/Phoenixthedoggo/Discord-Google-Play-Music-Desktop-Player-Sheppietunes Fork/blob/Sheppietunes/pictures/dis1.png)
+# ![work1](https://github.com/Phoenixthedoggo/Discord-Google-Play-Music-Desktop-Player-Sheppietunes-Fork/blob/Sheppietunes/pictures/dis1.png)
 
 Ghost Stories
 
