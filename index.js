@@ -59,6 +59,20 @@ var albumArt = {
     "Monstercat Uncaged Vol. 3": "mcatbv3",
     "Monstercat: Best of 2017": "mcat2017",
     "Ready to Fly (feat. Adam Young)": "rtf",
+    "Ocean Eyes": "jayc",
+    "The Blue Room": "tbr",
+    "Prospekt's March": "prospm",
+    "Brothers & Sisters": "bands",
+    "Something Just Like This": "stjlt",
+    "Up To Now": "snowpatrol",
+    "The Lightning Strike (What If This Storm Ends?)": "snowpatrol",
+    "Greatest Hits": "snowpatrol",
+    "Final Straw": "snowpatrol",
+    "Fallen Empires": "snowpatrol",
+    "Eyes Open": "snowpatrol",
+    "A Hundred Million Suns": "snowpatrol",
+    "When It's All Over We Still Have to Clear Up": "snowpatrol",
+    "Songs For Polar Bears": "snowpatrol",
 
 
 
@@ -108,7 +122,7 @@ async function updateActivity() {
       			state: `By ${obj["song"]["artist"]}`,
      			largeImageKey: albumArt[obj["song"]["album"]],
       			largeImageText: 'Awoooooooo',
-      			smallImageKey: 'sheppie',
+      			smallImageKey: 'playing',
       			smallImageText: 'Woof! ^w^',
       			endTimestamp: timeendepoch,
       			startTimestamp: epochthing,
@@ -117,6 +131,7 @@ async function updateActivity() {
 	} else {
 		rpc.setActivity({
 			details: `Nothing`,
+			smallImageText: 'paused',
       			largeImageText:'UwU',
 			largeImageKey: 'headlarge',
 			instance: false,
