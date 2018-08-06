@@ -11,12 +11,14 @@ function round(value, precision) {
 var albumArt = {
     "Parachutes": "parachutes",
     "X&Y": "xy",
-    "Ghost Stories": "ghoststories",
+		"Ghost Stories": "ghoststories",
     "Viva La Vida Or Death And All His Friends": "viva",
-    "Kaleidoscope EP": "kale",
-    "A Head Full Of Dreams": "head",
-    "Mylo Xyloto": "mylo",
-    "A Rush Of Blood To The Head": "rush",
+    "Viva La Vida - Prospekt's March Edition": "viva",
+		"Kaleidoscope EP": "kale",
+		"A Head Full Of Dreams": "head",
+		"Mylo Xyloto": "mylo",
+		"A Rush Of Blood To The Head": "rush",
+    "Every Teardrop is a Waterfall - Single": "movingto",
     "Night Visions (Deluxe)": "idnv",
     "Smoke + Mirrors (Deluxe)": "idsm",
     "Everything Black (feat. Mike Taylor)": "eb",
@@ -57,8 +59,10 @@ var albumArt = {
     "Monstercat Uncaged, Vol. 1": "mcatbv1",
     "Monstercat Uncaged Vol. 2": "mcatbv2",
     "Monstercat Uncaged Vol. 3": "mcatbv3",
+    "Monstercat Uncaged Vol. 4": "mcatbv4",
     "Monstercat: Best of 2017": "mcat2017",
     "Ready to Fly (feat. Adam Young)": "rtf",
+    "Just Like I Do": "jlid",
     "Ocean Eyes": "jayc",
     "The Blue Room": "tbr",
     "Prospekt's March": "prospm",
@@ -73,6 +77,10 @@ var albumArt = {
     "A Hundred Million Suns": "snowpatrol",
     "When It's All Over We Still Have to Clear Up": "snowpatrol",
     "Songs For Polar Bears": "snowpatrol",
+    "The Click": "click",
+    "Furry Gang - Single": "noshy",
+    "All the Single Furries - Single": "singlefur",
+
 
 
 
@@ -118,22 +126,25 @@ async function updateActivity() {
 
 	if(obj["playing"] == true) {
 		rpc.setActivity({
-      			details: `Howling to: ${obj["song"]["title"]}`,
-      			state: `By ${obj["song"]["artist"]}`,
-     			largeImageKey: albumArt[obj["song"]["album"]],
-      			largeImageText: 'Awoooooooo',
-      			smallImageKey: 'playing',
-      			smallImageText: 'Woof! ^w^',
-      			endTimestamp: timeendepoch,
-      			startTimestamp: epochthing,
-      			instance: false,
+      type: 2,
+			details: `Howling to: ${obj["song"]["title"]}`,
+			state: `By ${obj["song"]["artist"]}`,
+			largeImageKey: albumArt[obj["song"]["album"]],
+      largeImageText: 'Awoooooooo',
+      smallImageKey: 'playing',
+      smallImageText: 'Woof! ^w^',
+      endTimestamp: timeendepoch,
+			instance: false,
 		});
 	} else {
 		rpc.setActivity({
-			details: `Nothing`,
-			smallImageText: 'paused',
-      			largeImageText:'UwU',
-			largeImageKey: 'headlarge',
+      type: 2,
+      details: `Howling to: ${obj["song"]["title"]}`,
+			state: `By ${obj["song"]["artist"]}`,
+      largeImageText:'Awoooooooo',
+      smallImageText: 'Woof! ^w^',
+      smallImageKey: 'paused',
+      largeImageKey: albumArt[obj["song"]["album"]],
 			instance: false,
 		});
 	}
